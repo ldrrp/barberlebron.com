@@ -1,0 +1,45 @@
+name: Build website
+on:
+  schedule:
+    - cron:  '0 0 1 * *'
+  push:
+    paths:
+    - '*'        # Run workflow for all file paths
+    - 'content/**'
+    - 'static/**'
+    - 'themes/**'
+    - '!/docs/*' # Don't run workflow when files are only in the /docs directory
+    branches:
+      - master
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+
+    - name: Install Hugo
+      run: |
+        curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "browser_download_url.*hugo_[^extended].*_Linux-64bit\.deb" | cut -d ":" -f 2,3 | tr -d \" | wget -qi -
+        package="$(find . -name "*Linux-64bit.deb")"
+        sudo dpkg -i $package
+        which hugo
+        hugo version
+        rm -rf *.deb
+
+    - name: Checkout Master
+      run: git checkout master
+
+    - name: Run Build Program
+      run: |
+        hugo
+
+    - name: Commit Changes
+      run: |
+        git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git config --global user.name "Github Actions"
+        git add .
+        git commit -m "New build"
+        git remote set-url origin https://ldrrp:${{ secrets.PERSONAL }}@github.com/${{ github.repository }}.git
+        git push origin master
