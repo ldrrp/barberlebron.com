@@ -39,4 +39,4 @@ These are the many services and techniques I am experienced in:
 * Shampoo and conditioning
 * Hair Styling 
 
-See some of my [work](/projects)
+See some of my [work](/portfolio)
