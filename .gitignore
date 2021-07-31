@@ -49,3 +49,6 @@ resources/
 
 # IntelliJ IDE
 .idea/
+
+#
+hugo.exe

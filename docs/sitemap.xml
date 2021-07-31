@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://barberlerbron.com/about/</loc>
+    <lastmod>2021-07-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://barberlerbron.com/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -79,9 +82,6 @@
   </url><url>
     <loc>https://barberlerbron.com/tags/themes/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://barberlerbron.com/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://barberlerbron.com/authors/</loc>
   </url><url>
