@@ -109,7 +109,7 @@ author = "authors"
 name = "instagram"
 icon = "fa fa-instagram"
 weight = 1
-url = "https://www.instagram.com/joe.lebron/"
+url = "https://www.instagram.com/ej.lebron/"
 
 [[params.social]]
 name = "Twitter"
@@ -127,7 +127,7 @@ url = "mailto: thejoelebron@gmail.com"
 name = "Phone"
 icon = "fa fa-phone"
 weight = 3
-url = "tel:716-308-6044"
+url = "tel:716-507-9074"
 
 #[[params.social]]
 #name = "RSS"
